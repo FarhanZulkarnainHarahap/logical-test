@@ -1,5 +1,5 @@
 function solveChessboard(input: string): string | number {
-  const lines = input.trim().split(/s+/);
+  const lines = input.trim().split(/n+/);
   const n = parseInt(lines[0]);
   const coords = lines.slice(1);
 
