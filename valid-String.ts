@@ -36,6 +36,5 @@ function isValidString(s: string): "YES" | "NO" {
   return "NO";
 }
 
-// Pengujian Test Case dari Gambar
-console.log(isValidString("aabbccddeefghi")); // Output: NO
-console.log(isValidString("abcdefghhgfedecba")); // Output: YES
+console.log(isValidString("aabbccddeefghi"));
+console.log(isValidString("abcdefghhgfedecba"));
