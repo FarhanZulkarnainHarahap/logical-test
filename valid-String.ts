@@ -35,3 +35,4 @@ function isValidString(s: string): "YES" | "NO" {
 
 console.log(isValidString("aabbccddeefghi"));
 console.log(isValidString("abcdefghhgfedecba"));
+console.log(isValidString("aabbc"));
