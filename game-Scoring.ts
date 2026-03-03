@@ -16,10 +16,10 @@ function calculateGameScore(input: string): string | number | undefined {
       winStreak++;
       if (winStreak === 3) {
         totalScore += 2;
-        winStreak = 0; // reset win streak after bonus
+        winStreak = 0;
       }
     } else {
-      winStreak = 0; // reset win streak if not a win
+      winStreak = 0;
     }
   }
   return totalScore;

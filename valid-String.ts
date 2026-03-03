@@ -14,21 +14,18 @@ function isValidString(s: string): "YES" | "NO" {
 
   const distinctFreqs = Object.keys(freqMap).map(Number);
 
-  // Kondisi 1: Semua karakter punya frekuensi sama
   if (distinctFreqs.length === 1) return "YES";
 
-  // Kondisi 2: Ada lebih dari 2 jenis frekuensi berbeda (pasti tidak valid)
   if (distinctFreqs.length !== 2) return "NO";
 
   const [f1, f2] = distinctFreqs;
   const [c1, c2] = [freqMap[f1], freqMap[f2]];
 
-  // Kondisi 3: Cek apakah bisa jadi valid dengan menghapus 1 karakter
   if (
     (f1 === 1 && c1 === 1) ||
-    (f2 === 1 && c2 === 1) || // Satu karakter frekuensi 1 dan cuma ada 1 biji
+    (f2 === 1 && c2 === 1) ||
     (f1 - f2 === 1 && c1 === 1) ||
-    (f2 - f1 === 1 && c2 === 1) // Selisih frekuensi cuma 1 dan hanya pada 1 karakter
+    (f2 - f1 === 1 && c2 === 1)
   ) {
     return "YES";
   }
